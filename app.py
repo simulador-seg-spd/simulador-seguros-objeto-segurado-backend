@@ -26,7 +26,7 @@ logger.addHandler(loggerFile)
 
 
 def config_routes(app):
-  BASE_PATH_HTTP = "/api"
+  BASE_PATH_HTTP = "/"
   api = Api()
   api.prefix = BASE_PATH_HTTP
   config_resource_routes(api)
@@ -63,4 +63,4 @@ def app_start():
 
 app = app_start()
 if __name__ == "__main__":
-  app.run(debug=False, host="0.0.0.0", port=5000)
+  app.run(debug=False, host="0.0.0.0", port=8080)
